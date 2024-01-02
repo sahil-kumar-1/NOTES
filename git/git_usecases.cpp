@@ -51,3 +51,30 @@ Q: to see the files which are different from particular branch/commit.
 -> 
 git diff --name-only release        // list the files whose content are different from release. 
 
+
+
+Q: connecting local git repository to github remote repository.
+->  
+     git init                  // initialing current folder as git repository  
+           /*
+              - once local repo has been initialized
+              - create a branch in local repo  ( git checout -b / git branch )
+              - add files/folder and commit the changes  ( git add, git commit )
+           */
+
+     git remote set-url origin https://username@github.com/username/repository.git
+  
+     git push origin branch_name 
+           /*
+              - enter gihub user id
+              - enter public access token as password ( make sure github token has needed permission while creating tokens ) 
+
+              - if local branch is not on remote github repo then it will be created 
+              - if local branch is on repome github repo 
+                 make sure to resolve conflicts by taking pull and merging   
+           */
+                        
+
+Q: creating gihub public access token    
+
+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
