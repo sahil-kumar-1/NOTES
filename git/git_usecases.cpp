@@ -52,6 +52,42 @@ Q: to see the files which are different from particular branch/commit.
 git diff --name-only release        // list the files whose content are different from release. 
 
 
+Q: what is reflog? 
+-> chronological list of reference updates in your repository. 
+   Each entry in the reflog includes a timestamp, a description of the action that caused the update, and the old and new values of the reference.
+   // reference        : branch, commit , tag etc any thing that points to certain snapshort of git.
+   // reference update : checkout  as HEAD updates to different branch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------- --------------------------------------------------*/
+/*---------------------------------------       -   -------------------------------------------*/
+/*---------------------------------------------- --------------------------------------------------*/
+
+
+
 
 Q: connecting local git repository to github remote repository.
 ->  
@@ -60,9 +96,10 @@ Q: connecting local git repository to github remote repository.
               - once local repo has been initialized
               - create a branch in local repo  ( git checout -b / git branch )
               - add files/folder and commit the changes  ( git add, git commit )
+              - git remote add origin  https://username@github.com/username/repository.git
            */
 
-     git remote set-url origin https://username@github.com/username/repository.git
+     git remote add origin https://username@github.com/username/repository.git
   
      git push origin branch_name 
            /*
@@ -77,4 +114,27 @@ Q: connecting local git repository to github remote repository.
 
 Q: creating gihub public access token    
 
-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
+     /*
+         login github > top right icon > settings > developer settings > public access token 
+     
+     */
+
+Q: appending user-name and access token in repo url so we do not need to enter it every time we access the remote repo. 
+
+    /*
+        git remote set-url origin https://<username>:<token>@github.com/<username>/<repository>.git
+
+        url eg  : https://sahil-kumar-1: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@github.com/sahil-kumar-1/NOTES.git
+    
+    */
+
+Q: satshing/saving working area which helps when changes are not commited and we wish to switch to different branch. 
+    
+    /*
+        git stash
+        git stash apply    //  retrieve and apply the most recent stash changes but keep them in the stash stack for later use.     
+        git stash pop      //  retrieve and apply the most recent stash changes and remove them from the stash stack immediately.
+    */
+
+
+
